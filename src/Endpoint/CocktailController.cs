@@ -5,7 +5,6 @@ using Newtonsoft.Json;
 namespace Endpoint;
 
 [Route("cocktail-mixer")]
-
 public class CocktailController: Controller
 {
     private IMediator Mediator { get; set; }
@@ -23,7 +22,7 @@ public class CocktailController: Controller
     {
         SafeLog(request);
 
-        return new JsonResult(Mediator.Send(request));
+        return new JsonResult(Mediator.Send(request).Result);
     }
     
     private void SafeLog(object request)

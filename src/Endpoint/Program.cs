@@ -9,9 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSingleton<ICocktailClient>(new CocktailClient(builder.Configuration["CocktailClient:BaseUrl"]));
+builder.Services.AddSingleton<ITranslate>(new SithTranslator());
 builder.Services.AddControllers().AddNewtonsoftJson();
-
-
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Is(LogEventLevel.Debug)

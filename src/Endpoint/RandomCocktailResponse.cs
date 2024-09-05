@@ -7,11 +7,6 @@ public class RandomCocktailResponse
     public string Instructions { get; set; }
     public string Image { get; set; }       
     public List<Ingredient> Ingredients { get; set; }
-
-    public RandomCocktailResponse()
-    {
-        Ingredients = new List<Ingredient>();
-    }
 }
 
 public class Ingredient

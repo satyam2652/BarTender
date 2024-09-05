@@ -33,3 +33,4 @@ D:\BarTender\src\Endpoint\obj\Debug\net6.0\refint\Endpoint.dll
 D:\BarTender\src\Endpoint\obj\Debug\net6.0\Endpoint.pdb
 D:\BarTender\src\Endpoint\obj\Debug\net6.0\Endpoint.genruntimeconfig.cache
 D:\BarTender\src\Endpoint\obj\Debug\net6.0\ref\Endpoint.dll
+D:\BarTender\src\Endpoint\bin\Debug\net6.0\appsettings.json

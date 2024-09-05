@@ -4,5 +4,6 @@
     &lt;TestId&gt;xUnit::2F656199-8140-4A3A-9123-A818585FF158::net6.0::Core.Tests.CocktailClientTestFixture.Get&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::2F656199-8140-4A3A-9123-A818585FF158::net6.0::Core.Tests.CocktailClientTestFixture.GetRandomCocktail&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::A570C5C7-9A62-4FFC-8BDB-D5593331F9EA::net6.0::Endpoint.Tests.RandomCocktailRequestHandlerTestFixture.HandlerTestFixture&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2F656199-8140-4A3A-9123-A818585FF158::net6.0::Core.Tests.SithTranslatorTestFixture.TranslateRecipe&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

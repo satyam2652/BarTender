@@ -9,10 +9,11 @@ public class RandomCocktailRequestHandler: IRequestHandler<RandomCocktailRequest
 {
     private ILogger Logger { get; set; }
     private ICocktailClient CocktailClient { get; set; }
-    
-    public RandomCocktailRequestHandler(ICocktailClient cocktailClient, ILogger logger)
+    private ITranslate Translator { get; set; }
+    public RandomCocktailRequestHandler(ICocktailClient cocktailClient, ITranslate translator, ILogger logger)
     {
         CocktailClient = cocktailClient;
+        Translator = translator;
         Logger = logger;
     }
     public Task<RandomCocktailResponse> Handle(RandomCocktailRequest request, CancellationToken cancellationToken)
@@ -21,8 +22,21 @@ public class RandomCocktailRequestHandler: IRequestHandler<RandomCocktailRequest
         {
             var randomCocktail = CocktailClient.GetRandomCocktail();
             Logger.Information("Request processed successfully. Response received was: {response}", JsonConvert.SerializeObject(randomCocktail));
-            return Task.FromResult(new RandomCocktailResponse());
-
+            
+            var mapper = new ReceipeMapper();
+            var jsonResponse = new RandomCocktailResponseFactory().Create();
+            
+            if (request.Language == Language.English)
+            {
+                mapper.Map(randomCocktail, Language.English, jsonResponse);
+                
+                return Task.FromResult(jsonResponse);
+            }
+            
+            var translatedReceipe = Translator.TranslateRecipe(randomCocktail);
+            mapper.Map(translatedReceipe, Language.Sith, jsonResponse);
+            
+            return Task.FromResult(jsonResponse);
         }
         catch(Exception ex)
         {

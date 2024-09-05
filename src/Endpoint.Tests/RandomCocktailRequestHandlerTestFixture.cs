@@ -1,6 +1,5 @@
 ﻿using Core;
 using Serilog;
-using Serilog.Core;
 using Serilog.Events;
 using Xunit;
 
@@ -9,11 +8,14 @@ namespace Endpoint.Tests;
 public class RandomCocktailRequestHandlerTestFixture
 {
     private ILogger Logger { get; set; }
+    private CocktailClient CocktailClient { get; set; }
 
     public RandomCocktailRequestHandlerTestFixture()
     {
         Logger = ConfigureLogger();
+        CocktailClient = new CocktailClient("https://www.thecocktaildb.com/api/json/v1/1/random.php");
     }
+
     private static ILogger ConfigureLogger()
     {
         Log.Logger = new LoggerConfiguration()
@@ -28,9 +30,10 @@ public class RandomCocktailRequestHandlerTestFixture
     public void HandlerTestFixture()
     {
         var testSubject = new RandomCocktailRequestHandler(
-            new CocktailClient("https://www.thecocktaildb.com/api/json/v1/1/random.php"),
+            CocktailClient,
+            new SithTranslator(),
             Logger
         );
-        testSubject.Handle(new RandomCocktailRequest { Language = Language.English }, CancellationToken.None);
+        var json = testSubject.Handle(new RandomCocktailRequest { Language = Language.English }, CancellationToken.None);
     }
 }
