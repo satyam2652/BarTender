@@ -1,0 +1,8 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=228c67a0_002De8d2_002D4510_002D8da9_002Dfdb54b720d44/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Get" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::2F656199-8140-4A3A-9123-A818585FF158::net6.0::Core.Tests.CocktailClientTestFixture.Get&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2F656199-8140-4A3A-9123-A818585FF158::net6.0::Core.Tests.CocktailClientTestFixture.GetRandomCocktail&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A570C5C7-9A62-4FFC-8BDB-D5593331F9EA::net6.0::Endpoint.Tests.RandomCocktailRequestHandlerTestFixture.HandlerTestFixture&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

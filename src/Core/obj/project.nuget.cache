@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tfnqWPKl4PKturz1AqUr6sQgH7xiQuBIz1kI/im8V5K1X6d9pSXykfepHSq+JI8QGiYPNkM2Nto4MBI+pdXX6g==",
+  "success": true,
+  "projectFilePath": "D:\\BarTender\\src\\Core\\Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rayne\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
